@@ -26,10 +26,16 @@ sealed class Settings
     /// <summary>Set when the saved file existed but couldn't be read; the app should tell the user.</summary>
     public static string? LoadProblem { get; private set; }
 
+    /// <summary>True when there was no saved file, i.e. the app has never run on this account.</summary>
+    public static bool IsFirstRun { get; private set; }
+
     public static Settings Load()
     {
         if (!File.Exists(FilePath))
+        {
+            IsFirstRun = true;
             return Defaults();
+        }
 
         for (int attempt = 1; ; attempt++)
         {
@@ -60,6 +66,7 @@ sealed class Settings
         {
             new Rule { Vk = (int)Keys.Oemtilde, Shift = false, From = "`", To = "ë" },
             new Rule { Vk = (int)Keys.Oemtilde, Shift = true, From = "~", To = "Ë" },
+            new Rule { Vk = (int)Keys.OemPipe, Shift = true, From = "|", To = "ç" },
         },
     };
 

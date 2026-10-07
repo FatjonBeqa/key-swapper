@@ -22,17 +22,23 @@ There is no installer and nothing else to install. The app is a single file.
 - **Turn a rule on or off** with its checkbox, or remove it with the delete button next to it.
 - **Turn all swapping on or off** at any time with <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>K</kbd>, or from the tray icon menu.
 - **Minimize** the window and Key Swapper keeps running in the system tray. Click the tray icon to open it again.
-- Tick **Start with Windows** so it's always ready.
+- **Start with Windows** is on by default, so it's always ready. Untick it in the window if you'd rather start it yourself.
 
 Shortcuts that use <kbd>Ctrl</kbd>, <kbd>Alt</kbd> or <kbd>Win</kbd> are never changed, so things like <kbd>Ctrl</kbd>+<kbd>`</kbd> keep working.
 
-The app starts with two example rules (<kbd>`</kbd> → ë and <kbd>~</kbd> → Ë), which you can change or remove.
+The app comes with three ready-made rules, which you can change or remove:
+
+| Press | Types |
+|---|---|
+| <kbd>`</kbd> | ë |
+| <kbd>Shift</kbd>+<kbd>`</kbd> (~) | Ë |
+| <kbd>Shift</kbd>+<kbd>\\</kbd> (\|) | ç |
 
 Your rules are saved in `%AppData%\KeySwapper\settings.json`.
 
 ## Uninstall
 
-1. Untick **Start with Windows** (if you ticked it).
+1. Untick **Start with Windows**.
 2. Quit the app (close the window and choose **Quit**, or right-click the tray icon → **Exit**).
 3. Delete `KeySwapper.exe` and, optionally, the `%AppData%\KeySwapper` folder.
 

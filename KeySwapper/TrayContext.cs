@@ -16,8 +16,15 @@ sealed class TrayContext : ApplicationContext
     {
         settings = Settings.Load();
 
+        // On first run, start with Windows by default (the checkbox in the window turns it off),
+        // and save right away so this only happens once.
+        if (Settings.IsFirstRun)
+        {
+            try { Settings.StartWithWindows = true; } catch { }
+            settings.Save();
+        }
         // Keep the Run entry pointing at wherever the exe lives now.
-        if (Settings.StartWithWindows)
+        else if (Settings.StartWithWindows)
             try { Settings.StartWithWindows = true; } catch { }
 
         hook = new KeyboardHook(settings);
