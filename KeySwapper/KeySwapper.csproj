@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationHighDpiMode>SystemAware</ApplicationHighDpiMode>
+    <RootNamespace>KeySwapper</RootNamespace>
+    <AssemblyName>KeySwapper</AssemblyName>
+    <Version>1.0.0</Version>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+    <Product>Key Swapper</Product>
+    <Company>Beqa Industries</Company>
+    <Authors>Beqa Industries</Authors>
+    <Copyright>© 2026 Beqa Industries</Copyright>
+    <Description>Key Swapper</Description>
+    <!-- WFO5001: dark mode APIs are flagged experimental. WFO1000: designer serialization, unused here. -->
+    <NoWarn>$(NoWarn);WFO5001;WFO1000</NoWarn>
+  </PropertyGroup>
+
+</Project>
